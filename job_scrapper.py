@@ -1,8 +1,8 @@
 from os import WEXITED
 import tkinter as tk
 import webbrowser
-from indeed import indeed_fun
-from simply_hired import sh_fun
+from indeed_data import indeed_fun
+from simply_hired_data import sh_fun
 
 
 def callback(url):
