@@ -57,22 +57,16 @@ def sh_fun(job_name, job_location):
         company_location = loc.text
         location.append(company_location)
 
-    # print(len(location))
-    # print(len(links))
-    # print(len(titles))
-    # print(len(company))
+    simply_hired_obj = {
+        'titles' : titles,
+        'company' : company,
+        'location' : location,
+        'links' : links
+    }
 
-    for i in range(0, len(titles)):
-        print(titles[i]+"\n" + company[i] +
-            "\n" + location[i] + "\n" + links[i] + "\n")
-
+    return simply_hired_obj
 
     # https://www.uber.com/careers/list/102947/?rx_campaign=indeed22&rx_group=124698&rx_job=102947&rx_r=none&rx_source=Indeed&rx_ts=20210512T055126Z&iis=marketing&iisn=indeed&iisp=organic&rx_viewer=20df04e5b2ea11eb890931dce5552136ac852a55d31445f7bc0c2440efb03d57
     # Associate Risk Analyst I
     # Uber
     ## Hyderabad, Telangana
-
-    # https://simplyhired.co.in+SerpJob-link["href"]
-    # SerpJob-link.text
-    ## jobposting-company.text or jobposting-company.a.text
-    # jobposting-location.text

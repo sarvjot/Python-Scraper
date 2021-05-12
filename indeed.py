@@ -1,11 +1,10 @@
 import mechanicalsoup
 from bs4 import BeautifulSoup
 
+
 def indeed_fun(job_name, job_location):
 
     indeed_url = "https://in.indeed.com/"
-    # job_name = "Financial Analyst"
-    # job_location = "India"
 
     browser = mechanicalsoup.StatefulBrowser()
 
@@ -27,7 +26,6 @@ def indeed_fun(job_name, job_location):
 
     job_titles_a = final_soup.find_all("a", class_="jobtitle")
     titles = []
-
 
     for title_a in job_titles_a:
         title = title_a["title"]
@@ -88,12 +86,15 @@ def indeed_fun(job_name, job_location):
         link = link.replace(" ", "%20")
         links.append(link)
 
-    # print(titles)
-    # print(ratings)
-    for i in range(0, len(titles)):
-        print(titles[i]+"\n"+ratings[i] + "\n" + company[i] +
-            "\n" + location[i] + "\n" + links[i] + "\n")
+    indeed_obj = {
+        'titles': titles,
+        'ratings': ratings,
+        'company': company,
+        'location': location,
+        'links': links
+    }
 
+    return indeed_obj
 
     # Financial Analyst I
     # HP
