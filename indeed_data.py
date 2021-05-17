@@ -1,6 +1,7 @@
 import mechanicalsoup
 from bs4 import BeautifulSoup
 
+# This is a useless commit
 
 def indeed_fun(job_name, job_location):
 
